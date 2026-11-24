@@ -1,0 +1,9 @@
+{
+  "playwright_version": "1.65.1",
+  "initial_test": "passed",
+  "demonstration_with_expected_2": "failed as expected; received 1",
+  "failure_screenshot_saved": true,
+  "failure_trace_saved": true,
+  "final_test": "1 passed",
+  "source_restored": true
+}

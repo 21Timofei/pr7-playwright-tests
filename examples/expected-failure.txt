@@ -1,0 +1,50 @@
+
+> ui-tests@1.0.0 test
+> playwright test
+
+
+Running 1 test using 1 worker
+
+  ✘  1 tests/counter.spec.js:3:1 › Кнопка «Добавить» увеличивает счётчик на один (5.1s)
+
+
+  1) tests/counter.spec.js:3:1 › Кнопка «Добавить» увеличивает счётчик на один ─────────────────────
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator:  getByLabel('Количество')
+    Expected: "2"
+    Received: "1"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveText" getByLabel('Количество') with timeout 5000ms
+      - waiting for getByLabel('Количество')
+        14 × locator resolved to <output aria-label="Количество">1</output>
+           - unexpected value "1"
+
+
+      10 |   await expect(quantity).toHaveText('0');
+      11 |   await page.getByRole('button', { name: 'Добавить' }).click();
+    > 12 |   await expect(quantity).toHaveText('2');
+         |                          ^
+      13 | });
+      14 |
+        at /Users/timofejverhososov/Documents/Codex/2026-11-24/ds/outputs/ui-tests/tests/counter.spec.js:12:26
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/counter-Кнопка-«Добавить»-увеличивает-счётчик-на-один/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/counter-Кнопка-«Добавить»-увеличивает-счётчик-на-один/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/counter-Кнопка-«Добавить»-увеличивает-счётчик-на-один/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/counter-Кнопка-«Добавить»-увеличивает-счётчик-на-один/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests/counter.spec.js:3:1 › Кнопка «Добавить» увеличивает счётчик на один ──────────────────────

@@ -1,0 +1,10 @@
+
+> ui-tests@1.0.0 test
+> playwright test
+
+
+Running 1 test using 1 worker
+
+  ✓  1 tests/counter.spec.js:3:1 › Кнопка «Добавить» увеличивает счётчик на один (3.3s)
+
+  1 passed (7.6s)
